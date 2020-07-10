@@ -28,6 +28,7 @@ const registerUser = function({body}, res){
         console.log(err)
         return res.json({ message: "The provided email is already registered!" , err:err});
       }
+      console.log(err)
       return res.json({ message : "Something went wrong"});
     } else{
       const token = newUser.getJwt();
