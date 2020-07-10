@@ -2,7 +2,7 @@ const mongoose= require('mongoose');
 const passport = require('passport');
 const User = mongoose.model("User");
 
-/*
+
 const registerUser = function({body}, res){
   if (!body.first_name ||
     !body.last_name ||
@@ -35,8 +35,8 @@ const registerUser = function({body}, res){
     }
   });
 
-}*/
-const registerUser = function({ body }, res) {
+}
+/*const registerUser = function({ body }, res) {
 
 console.log(body);
 
@@ -86,7 +86,7 @@ console.log(body);
     });
 
 }
-
+*/
 const loginUser = function(req,res){
   if(!req.body.email || !req.body.password){
     return res.status(400).json({ msg: "All fields are required"})
